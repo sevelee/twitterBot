@@ -1,19 +1,16 @@
 console.log('The bot is starting')
 
-var twit = require('twit')
+var Twitter = require('twitter')
 
 var config = require('../../config')
 
-var myTwit = new twit(config)
+var client = new Twitter(config)
 
-var params = {
-    q: 'rainbow',
-    count: 2
-}
-
-console.log('start to twit get')
-myTwit.get('search/tweets', params, GotData)
-
-function GotData(err, data, response) {
-    console.log(data)
-}
+client.get('favorites/list', function(error, tweets, response) {
+  if (!error) {
+    console.log(tweets);
+  } else {
+    console.log(error)
+    console.log('error happened')
+  }
+})
