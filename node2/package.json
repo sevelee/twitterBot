@@ -9,5 +9,7 @@
   },
   "author": "Li Jiawei",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "twitter": "^1.7.1"
+  }
 }
