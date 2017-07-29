@@ -6,11 +6,13 @@ var config = require('../../config')
 
 var client = new Twitter(config)
 
-client.get('favorites/list', function(error, tweets, response) {
-  if (!error) {
-    console.log(tweets);
-  } else {
-    console.log(error)
-    console.log('error happened')
-  }
-})
+var params = {
+    q: '中古',
+    count: 2
+}
+
+client.get('search/tweets', params, gotData)
+
+function gotData(err, data, response) {
+    console.log(data)
+}
