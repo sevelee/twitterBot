@@ -12,6 +12,14 @@ var client = new Twitter(config)
 
 var processingCmd = 'processing-java --sketch=$PWD\\processingDraw --run'
 
+var powerShell = require('powershell')
+
+let ps = new powerShell(processingCmd)
+
+ps.on('output', data => {
+    console.log('processing cmd over.')
+})
+
 //----------------follow反应
 
 var stream = client.stream('user')
