@@ -8,6 +8,10 @@ var client = new Twitter(config)
 
 // config over
 
+//----------------processing 触发
+
+var processingCmd = 'processing-java --sketch=$PWD\\processingDraw --run'
+
 //----------------follow反应
 
 var stream = client.stream('user')
