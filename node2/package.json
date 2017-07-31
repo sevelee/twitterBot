@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "get-json": "0.0.3",
-    "twitter": "^1.7.1"
+    "twitter": "^1.7.1",
+    "webcam": "^3.1.1"
   }
 }
