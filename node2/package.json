@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "get-json": "0.0.3",
+    "powershell": "^2.2.0",
     "twitter": "^1.7.1"
   }
 }
