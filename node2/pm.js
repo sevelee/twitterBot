@@ -6,3 +6,6 @@ var city = 'beijing'
 
 var pm_path = 'https://api.waqi.info' + '/feed/:' + city + '/?token=:' + pm_token
 
+app.get(pm_path, function(err, data) {
+    console.log(data)
+})
